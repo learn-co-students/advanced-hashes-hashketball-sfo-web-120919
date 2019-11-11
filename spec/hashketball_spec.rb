@@ -1,6 +1,15 @@
 require 'spec_helper'
 
 describe 'hashketball' do
+  
+  describe '#create_player_hash' do 
+    
+    it 'returns a hash' do 
+      expect(create_player_hash("Alan Anderson", 0, 16, 22, 12, 12, 3, 1, 1)).to be_a(Hash)
+    end 
+    
+    
+  end 
 
   describe '#game_hash' do
     let(:top_level_keys) { [:home, :away] }
