@@ -258,7 +258,7 @@ describe 'bonus' do
 
   end
 
-  describe '#winning_team' do
+  xdescribe '#winning_team' do
 
     it 'returns the Brooklyn Nets' do
       expect(winning_team).to eq("Brooklyn Nets")
@@ -266,7 +266,7 @@ describe 'bonus' do
 
   end
 
-  describe '#player_with_longest_name' do
+  xdescribe '#player_with_longest_name' do
 
     it 'returns Bismack Biyombo' do
       expect(player_with_longest_name).to eq("Bismack Biyombo")
@@ -276,7 +276,7 @@ describe 'bonus' do
 
 end
 
-describe 'super bonus' do
+xdescribe 'super bonus' do
 
   describe '#long_name_steals_a_ton?' do
 
