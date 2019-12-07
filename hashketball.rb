@@ -125,8 +125,8 @@ def game_hash
 end
 
 def num_points_scored(player)
-  game_hash.each do |status, team_info|
-    team_info.each do |attribute, stats|
+  game_hash.each do |status, team|
+    team.each do |attribute, stats|
       if attribute == :players
         stats.each do |player_info| 
           if player_info[:player_name] == player
@@ -231,7 +231,7 @@ end
 def most_points_scored
   highest_points = 0
   scored_most = ""
-  game_hash.each do |status, team|
+  game_hash.each do |home_away, team|
     team.each do |attribute, stats|
       if attribute == :players
         stats.each do |player_info|
@@ -250,8 +250,8 @@ def winning_team
   total_home_points = 0 
   total_away_points = 0
 
-  game_hash.each do |status, team|
-    if status == :home
+  game_hash.each do |home_away, team|
+    if home_away == :home
       team.each do |attribute, stats|
         if attribute == :players
           stats.each do |player_info|
@@ -262,7 +262,7 @@ def winning_team
     end 
   total_home_points
 
-    if status == :away
+    if home_away == :away
       team.each do |attribute, stats|
         if attribute == :players
           stats.each do |player_info|
